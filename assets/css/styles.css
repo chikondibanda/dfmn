@@ -40,6 +40,11 @@
     font-size: 1.5rem;
 }
 
+.btn-brown:hover {
+  color: #ab957e;
+  border: 1px solid #ab957e;
+}
+
 /* Fonts */
 
 h1, h2, h3, h4, h5, h6, .libre-baskerville-regular {
