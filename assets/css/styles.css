@@ -9,7 +9,7 @@
 
 .bg-anthu {
     position: relative;
-    background: url('./assets/img/youth.jpeg');
+    background: url('../img/youth.jpeg');
     background-size: cover;
     background-position: center;
 /*    height: 560px;*/
@@ -31,19 +31,19 @@
     z-index: 2;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: serif;
-}
-
-body {
-	font-family: "Figtree";
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
 }
 
 /* Fonts */
 
 h1, h2, h3, h4, h5, h6, .libre-baskerville-regular {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Libre Baskerville", "Times New Roman", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -55,7 +55,15 @@ h1, h2, h3, h4, h5, h6, .libre-baskerville-regular {
 }
 
 .libre-baskerville-regular-italic {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Libre Baskerville", serif !important;
   font-weight: 400;
   font-style: italic;
+}
+
+div , .small {
+  font-family: 'Figtree', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
 }
