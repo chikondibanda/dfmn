@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <iframe hidden name=htmz
+        onload="setTimeout(()=>document.querySelector(contentWindow.location.hash||null)?.replaceWith(...contentDocument.body.childNodes))"></iframe>
+
     <h1>API Response</h1>
     <div id="api-response">Loading...</div>
     <button hx-get="https://chikondibanda.pythonanywhere.com/hello" hx-target="#api-response" hx-swap="innerHTML">Fetch
