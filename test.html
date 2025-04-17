@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Access with HTMX</title>
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+</head>
+
+<body>
+    <h1>API Response</h1>
+    <div id="api-response">Loading...</div>
+    <button hx-get="https://chikondibanda.pythonanywhere.com/hello" hx-target="#api-response" hx-swap="innerHTML">Fetch
+        Data</button>
+</body>
+
+</html>

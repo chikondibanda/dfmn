@@ -1,10 +1,10 @@
-
-.bg-brown, .btn-brown {
-	background: #A0876E;
+.bg-brown,
+.btn-brown {
+    background: #A0876E;
 }
 
 .btn-brown {
-	color: #FFF;
+    color: #FFF;
 }
 
 .bg-anthu {
@@ -12,7 +12,7 @@
     background: url('../img/youth.jpeg');
     background-size: cover;
     background-position: center;
-/*    height: 560px;*/
+    /*    height: 560px;*/
 }
 
 .bg-anthu::before {
@@ -26,7 +26,7 @@
     z-index: 1;
 }
 
-.bg-anthu > * {
+.bg-anthu>* {
     position: relative;
     z-index: 2;
 }
@@ -41,93 +41,113 @@
 }
 
 .btn-brown:hover {
-  color: #ab957e;
-  border: 1px solid #ab957e;
+    color: #ab957e;
+    border: 1px solid #ab957e;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 /* Fonts */
 
-h1, h2, h3, h4, h5, h6, .libre-baskerville-regular {
-  font-family: "Libre Baskerville", "Times New Roman", serif;
-  font-weight: 400;
-  font-style: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", "Times New Roman", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .libre-baskerville-bold {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .libre-baskerville-regular-italic {
-  font-family: "Libre Baskerville", serif !important;
-  font-weight: 400;
-  font-style: italic;
+    font-family: "Libre Baskerville", serif !important;
+    font-weight: 400;
+    font-style: italic;
 }
 
-div , .small {
-  font-family: 'Segoe UI', sans-serif;
+div,
+.small {
+    font-family: 'Segoe UI', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: serif;
 }
 
 
 /* Footer */
 
 .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 40px 0;
-        }
-        
-        .footer-logo {
-            max-width: 100px;
-            margin-bottom: 15px;
-        }
-        
-        .footer-heading {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .footer-links {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .contact-info {
-            margin-top: 20px;
-        }
-        
-        .contact-item {
-            margin-bottom: 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .footer-content {
-                flex-direction: column;
-            }
-            
-            .footer-column {
-                margin-bottom: 30px;
-            }
-        }
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-logo {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-heading {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-item {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Footer sticky to bottom */
+
+.footer {
+    position: sticky;
+    bottom: 0;
+}
