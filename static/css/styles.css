@@ -145,9 +145,9 @@ h6 {
 }
 
 
-/* Footer sticky to bottom */
+/* 2. LOGIN PAGE */
 
-.footer {
-    position: sticky;
-    bottom: 0;
+#loginForm {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1em;
 }
