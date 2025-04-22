@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <script src="../static/js/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -38,8 +38,8 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link text-white" href="/#about">About</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="/#contact">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="register.html">Register</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Login</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="/login">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <div class="row gx-5 justify-content-center px-2">
                         <div class="col-md-5">
                             <!--  -->
-                            <form id="loginForm" class="p-md-5 py-4">
+                            <form id="loginForm" class="p-md-5 py-4 auth">
                                 <div class="row">
                                     <div class="form-group mb-2">
                                         <label for="email">Email</label>
@@ -70,7 +70,7 @@
                                     </div>
                                     <div class="form-group mb-2">
                                         <label for="pwd">Password</label>
-                                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" minlength="8" required>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" minlength="8" required>
                                         <div class="valid-feedback">Valid.</div>
                                         <div class="invalid-feedback">Please fill out this field.</div>
                                       </div>
@@ -81,7 +81,7 @@
                                       <input class="form-check-input" type="checkbox" id="remember-me">
                                       <label class="form-check-label" for="remember-me"> Remember Me </label>
                                     </div>
-                                    <a href="auth-forgot-password-basic.html">
+                                    <a href="/register">
                                       <span>No Account? Register</span>
                                     </a>
                                 </div>
@@ -90,27 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Contact cards-->
-                <div class="row gx-5 row-cols-2 row-cols-lg-3 py-5" style="display: none !important;">
-                    <div class="col">
-                        <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3"><i
-                                class="bi bi-chat-dots"></i></div>
-                        <div class="h5 mb-2">Chat with us</div>
-                        <p class="text-muted mb-0">Chat live with one of our mentors.</p>
-                    </div>
-                    <div class="col">
-                        <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i>
-                        </div>
-                        <div class="h5">Ask the community</div>
-                        <p class="text-muted mb-0">Explore our community forums and communicate with other users.</p>
-                    </div>
-                    <div class="col">
-                        <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3"><i
-                                class="bi bi-question-circle"></i></div>
-                        <div class="h5">Support center</div>
-                        <p class="text-muted mb-0">Browse FAQ's and support articles to find solutions.</p>
-                    </div>
-                </div>
+               
             </div>
         </section>
 

@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 		let formData = {
 			email: $("#email").val(),
-			psw: $("#password").val()
+			password: $("#password").val()
 		};
 
 		collectData(formData);
@@ -25,7 +25,45 @@ $(document).ready(function(){
 
 			success: function (response) {
 				console.log("API response:", response);
-				alert("Data submitted successfully: " + response.message);
+				alert("Login credentials submitted successfully: " + response.message);
+			},
+
+			error: function(xhr, status, error){
+				console.error('API error:', error);
+				alert('Error submutting data: ' + error)
+			}
+		});
+	});
+
+		// Login
+
+	$("#registerForm").on('submit', function (event) {
+		event.preventDefault();
+
+		// Collect data
+
+		let formData = {
+			firstname: $('#firstname').val(),
+			lastname: $('#lastname').val(),
+			username: $('#username').val(),
+			email: $("#email").val(),
+			phone: $("#phone").val(),
+			password: $("#password").val()
+		};
+
+		collectData(formData);
+
+		// Send data
+
+		$.ajax({
+			url: 'http://localhost:8080/register',
+			type: 'POST',
+			contentType: 'application/json',
+			data: JSON.stringify(formData),
+
+			success: function (response) {
+				console.log("API response:", response);
+				alert("Registration data submitted successfully: " + response.message);
 			},
 
 			error: function(xhr, status, error){

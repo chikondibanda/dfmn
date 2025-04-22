@@ -4,30 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Digital Faith Mentorship Network</title>
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Local Bootstrap 5 -->
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+
+	<link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0" id="app">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3">
+            <nav class="navbar navbar-expand-lg bg-brown py-3">
                 <div class="container px-5">
-                    <a class="navbar-brand text-body fw-bold" href="index.html">
-                    	<img src="assets/img/Logo.webp" alt="" height="50" width="50">
+                    <a class="navbar-brand text-body fw-bold" href="#">
+                    	<img src="static/img/Logo.webp" alt="" height="50" width="50">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link text-body" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" href="contact.html">Resources</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" href="pricing.html">News</a></li>
-                            <li class="nav-item"><a class="nav-link text-body" href="contact.html">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="/register">Register</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="/login">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -51,26 +55,6 @@
                 </div>
             </header>
 
-            <section>
-            	<!-- Auth Screen -->
-			        <div v-if="!user">
-			            <h1 class="text-center mt-4 px-5">Faith Mentor Network</h1>
-			            <div class="row justify-content-center">
-			                <!-- Login/Register forms here -->
-			            </div>
-			        </div>
-
-			        <!-- Main App -->
-			        <div v-else>
-			            <nav class="navbar bg-light mb-4">
-			                <span class="navbar-brand">Welcome, {{ user.username }}!</span>
-			                <button @click="logout" class="btn btn-sm btn-outline-danger">Logout</button>
-			            </nav>
-			            <!-- Chat UI goes here -->
-			        </div>
-            </section>
-
-
             <!-- Features section-->
             <section class="py-5" id="features">
                 <div class="container px-5 my-5">
@@ -79,23 +63,27 @@
                         <div class="col-lg-8">
                             <div class="row gx-5 row-cols-1 row-cols-md-2">
                                 <div class="col mb-5 h-100">
-                                    <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                                    <h2 class="h5">Featured title</h2>
+                                    <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-person-square"></i>
+                                    </div>
+                                    <h2 class="h5">Get Your Personalized Mentorship</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col mb-5 h-100">
-                                    <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                                    <h2 class="h5">Featured title</h2>
+                                    <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+                                    <h2 class="h5">Work With Faithful Experts</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col mb-5 mb-md-0 h-100">
                                     <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                                    <h2 class="h5">Featured title</h2>
+                                    <h2 class="h5">Networking</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                                 <div class="col h-100">
-                                    <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                                    <h2 class="h5">Featured title</h2>
+                                    <div class="feature bg-brown bg-gradient text-white rounded-3 mb-3">
+                                        <i class="bi bi-activity"></i>
+                                    </div>
+                                    <h2 class="h5">Review and Reflect</h2>
                                     <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
                                 </div>
                             </div>
@@ -127,7 +115,7 @@
             </div>
             <!-- Blog preview section-->
             <section class="py-5">
-                <div class="container px-5 my-5">
+                <div class="container my-5">
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6">
                             <div class="text-center">
@@ -139,7 +127,7 @@
                     <div class="row gx-5">
                         <div class="col-lg-4 mb-5">
                             <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
+                                <img class="card-img-top" src="../static/img/don2.jpg" alt="..." />
                                 <div class="card-body p-4">
                                     <div class="badge bg-brown bg-gradient rounded-pill mb-2">Mentor</div>
                                     <a class="text-decoration-none link-dark stretched-link" href="#!">
@@ -153,7 +141,7 @@
                         </div>
                         <div class="col-lg-4 mb-5">
                             <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="https://dummyimage.com/600x350/adb5bd/495057" alt="..." />
+                                <img class="card-img-top" src="../static/img/dons.jpg" alt="..." />
                                 <div class="card-body p-4">
                                     <div class="badge bg-brown bg-gradient rounded-pill mb-2">Mentor</div>
                                     <a class="text-decoration-none link-dark stretched-link" href="#!">
@@ -165,7 +153,7 @@
                         </div>
                         <div class="col-lg-4 mb-5">
                             <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="https://dummyimage.com/600x350/6c757d/343a40" alt="..." />
+                                <img class="card-img-top" src="../static/img/dons.jpg" alt="..." />
                                 <div class="card-body p-4">
                                     <div class="badge bg-brown bg-gradient rounded-pill mb-2">Mentor</div>
                                     <a class="text-decoration-none link-dark stretched-link" href="#!">
@@ -177,7 +165,7 @@
                         </div>
                     </div>
                     <!-- Call to action-->
-                    <aside class="bg-brown bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                   <!--  <aside class="bg-brown bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                         <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
                             <div class="mb-4 mb-xl-0">
                                 <div class="fs-3 fw-bold text-white">Register for free mentorship today.</div>
@@ -191,28 +179,65 @@
                                 <div class="small text-white-50">We care about privacy, and will never share your data.</div>
                             </div>
                         </div>
-                    </aside>
+                    </aside> -->
                 </div>
             </section>
         </main>
         <!-- Footer-->
-        <footer class="bg-brown py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Digital Faith Mentorship Network 2025</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="#!">Privacy</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Terms</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Contact</a>
+
+        %include('footer.tpl')
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                        <img src="static/img/Logo.webp" class="mx-auto mb-2" alt="" height="50" width="50"><br>
+                        <i class="">Your Journey Towards Spiritual Growth Begins Here</i>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Overview</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Information</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                        <h5 class="footer-heading">Head Office</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">Lilongwe, Malawi</div>
+                            <div class="contact-item">+265 880 999 280</div>
+                            <div class="contact-item">
+                                <a href="mailto:digitalfaithmentorshipnetwork@gmail.com">digitalfaithmentorshipnetwork@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  -->
+                <div class="row pt-5">
+                    <div class="col-md-6">
+                        <span>Copyright © 2025 - Digital Faith Mentorship Network</span>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="" class="text-white">Terms & Conditions</a>
+                        <a href="" class="text-white px-4">Privacy Policy</a>
                     </div>
                 </div>
             </div>
         </footer>
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="app.js"></script>
     </body>
 </html>

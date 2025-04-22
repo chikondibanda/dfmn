@@ -15,7 +15,7 @@ def home():
 def login():
     data = request.json
     email = data.get('email')
-    password = data.get('psw')
+    password = data.get('password')
 
     print(f"Received data: Email={email}, Password={password}")
 
@@ -30,14 +30,41 @@ def login():
     response.content_type = 'application/json'
     return json_dumps(response_data)
 
-# @app.route('/register')
-# def register_view():
-#     return template('register.html', root='./views/')
 
+@app.route('/register', method='POST')
+def login():
+    data = request.json
+    fname = data.get('firstname')
+    lname = data.get('lastname')
+    uname = data.get('username')
+    email = data.get('email')
+    phone = data.get('phone')
+    password = data.get('password')
 
-@app.route('/login/view', method='GET')
+    response_data = {
+        "message": "Data received successfully",
+        "received_data": {
+            "firstname": fname,
+            "lastname": lname,
+            "username": uname,
+            "email": email,
+            "phone": phone,
+            "password": password
+        }
+    }
+
+    response.content_type = 'application/json'
+    return json_dumps(response_data)
+
+# LOAD VIEWs
+
+@app.route('/login', method='GET')
 def login_view():
     return template('login.html', root='./views/')
+
+@app.route('/register', method='GET')
+def register_view():
+    return template('register.html', root='./views/')  
 
 # @app.route('/api/register', method='POST')
 # def register():
@@ -128,15 +155,14 @@ def login_view():
 #     # Implement creating message logic here
 #     pass
 
-
 # def hash_password(password):
 #     """Hash a password for storing."""
 #     return hashlib.sha256(password.encode()).hexdigest()
 
-
 @app.route('/static/<filepath:path>')
 def serve_static(filepath):
     return static_file(filepath, root='./static')
+
 
 
 if __name__ == '__main__':
